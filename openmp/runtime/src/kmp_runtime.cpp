@@ -1360,7 +1360,7 @@ void __kmp_serialized_parallel(ident_t *loc, kmp_int32 global_tid) {
                             &ompt_parallel_data, codeptr);
 
     __ompt_lw_taskteam_link(&lw_taskteam, this_thr, 1);
-    // don't use lw_taskteam after linking. content was swaped
+    // Don't use lw_taskteam after linking. The content was swapped.
 
     /* OMPT implicit task begin */
     if (ompt_enabled.ompt_callback_implicit_task) {
